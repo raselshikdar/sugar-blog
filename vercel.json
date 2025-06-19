@@ -1,14 +1,12 @@
 {
-  "rootDirectory": "packages/blogpress",
+  "version": 2,
   "builds": [
     {
       "src": "package.json",
       "use": "@vercel/static-build",
-      "config": { "distDir": ".vitepress/dist" }
+      "config": {
+        "distDir": ".vitepress/dist"
+      }
     }
-  ],
-  "routes": [
-    { "handle": "filesystem" },
-    { "src": "/(.*)", "dest": "/index.html" }
   ]
 }
