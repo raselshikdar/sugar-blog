@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "vitepress dev --host",
-    "build": "vitepress build",
+    "build:shared": "pnpm --filter @sugarat/theme run build",
+    "build": "pnpm run build:shared && vitepress build",
     "serve": "vitepress serve"
   },
   "dependencies": {
